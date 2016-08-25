@@ -1,6 +1,17 @@
 " Global pre-configuration
 syntax on
 inoremap jj <ESC>
+
+" vim-colors-solarized
+"syntax enable
+"colorscheme solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+let g:solarized_termcolors=256
+
 set cursorline
 set cursorcolumn
 set bg=dark
@@ -118,6 +129,8 @@ Plugin 'alfredodeza/pytest.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'kevinw/pyflakes-vim'
+Plugin 'kien/rainbow_parentheses.vim'
+"Plugin 'altercation/vim-colors-solarized'
 
 " Utility
 Plugin 'CmdlineComplete'
@@ -161,6 +174,32 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Setting for pyflakes 
 let g:pyflakes_use_quickfix = 0
+
+" Setting for rainbow_parentheses
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Setting for vim-indent
 " let g:indent_guides_auto_colors = 0
