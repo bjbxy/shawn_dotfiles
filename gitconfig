@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+
+[user]
+# Please adapt and uncomment the following lines:
+	email = xbai@redhat.com
+	name = Xiaoyu
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+    pl = pull
+[http]
+	sslverify = false

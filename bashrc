@@ -129,6 +129,10 @@ alias virt='source /home/shawn/insights/ceeph/bin/activate'
 alias fwork='cd /home/shawn/insights/falafel/falafel/mappers'       
 alias ftest='cd /home/shawn/insights/falafel/falafel/mappers/tests'       
 alias fvirt='source /home/shawn/insights/falafel/bin/activate'
+alias cwork='cd /home/shawn/insights/insights-content/content'
+alias cvirt='source /home/shawn/insights/insights-content/bin/activate'
+alias rvirt='source /home/shawn/insights/insights-rules/bin/activate'
+alias rwork='cd /home/shawn/insights/insights-rules/'
 
 # Java Development Kit
 JAVA_HOME=/usr/local/java/jdk1.8.0_77

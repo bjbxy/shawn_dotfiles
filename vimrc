@@ -1,16 +1,15 @@
 " Global pre-configuration
-syntax on
 inoremap jj <ESC>
 
 " vim-colors-solarized
-"syntax enable
+syntax enable
 "colorscheme solarized
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-let g:solarized_termcolors=256
+" if has('gui_running')
+"     set background=light
+" else
+"     set background=dark
+" endif
+"let g:solarized_termcolors=256
 
 set cursorline
 set cursorcolumn
@@ -130,6 +129,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'kevinw/pyflakes-vim'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'kannokanno/previm'
 "Plugin 'altercation/vim-colors-solarized'
 
 " Utility
@@ -200,6 +200,9 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Setting for vim-instant-preview
+let g:instant_markdown_autostart = 0
 
 " Setting for vim-indent
 " let g:indent_guides_auto_colors = 0
