@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/shawn/insights/ceeph"
+VIRTUAL_ENV="/home/shawn/shawn_github/shawn_dotfiles"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -58,6 +58,7 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT-}" ] ; then
     if [ "x" != x ] ; then
         PS1="$PS1"
     else
+        # PS1="(`basename \"$VIRTUAL_ENV\"`) $PS1"
         PS1="┌(`basename \"$VIRTUAL_ENV\"`)${PS1:1:${#PS1}}"
     fi
     export PS1
